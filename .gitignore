@@ -1,0 +1,6 @@
+/bld/
+/xcode/
+/vs/
+
+*.swp
+*.o
