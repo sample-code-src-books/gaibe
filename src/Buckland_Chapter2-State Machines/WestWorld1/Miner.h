@@ -33,8 +33,6 @@ class Miner : public BaseGameEntity
 {
 private:
 
-  State*                m_pCurrentState;
-  
   location_type         m_Location;
 
   //how many nuggets the miner has in his pockets
@@ -47,6 +45,9 @@ private:
 
   //the higher the value, the more tired the miner
   int                   m_iFatigue;
+  
+  State*                m_pCurrentState;
+
 
 public:
 

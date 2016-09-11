@@ -9,16 +9,23 @@
 //  Author: Mat Buckland (fup@ai-junkie.com)
 //
 //------------------------------------------------------------------------
-#include <windows.h>
-#include <conio.h>
 #include <iostream>
+
+//TODO separate this from rest of the code
+#if defined WINDOWS
+  #include <windows.h> //Platform.h
+  #include <conio.h>   //ConsoleIO.h
+#else
+  #include "Apple.h"
+#endif/*WINDOWS*/
+
+
 
 //default text colors can be found in wincon.h
 inline void SetTextColor(WORD colors)
 {
-  HANDLE hConsole=GetStdHandle(STD_OUTPUT_HANDLE);
-  
-  SetConsoleTextAttribute(hConsole, colors);
+  HANDLE hConsole=GetStdHandle(STD_OUTPUT_HANDLE); //TO_PORT
+  SetConsoleTextAttribute(hConsole, colors); //TO_PORT
 }
 
 inline void PressAnyKeyToContinue()
@@ -27,11 +34,11 @@ inline void PressAnyKeyToContinue()
   SetTextColor(FOREGROUND_BLUE| FOREGROUND_RED | FOREGROUND_GREEN);
 
   std::cout << "\n\nPress any key to continue" << std::endl; 
-
-  while (!_kbhit()){}
+  std::cin.ignore();
+  while (!_kbhit()){} //TO_PORT:kbhit is a conio.h
 
   return;
 }
 
 
-#endif
+#endif//CONSOLE_UTILS_H

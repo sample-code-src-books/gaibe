@@ -1,6 +1,10 @@
 cmake_minimum_required (VERSION 3.3)
 project (GameAIbyExample)
 
+set(COMMONPATH ${CMAKE_SOURCE_DIR}/Common)
+include_directories("${COMMONPATH}")
+
+
 add_subdirectory("Buckland_Chapter2-State Machines")
 add_subdirectory("Buckland_Chapter3-Steering Behaviors")
 add_subdirectory("Buckland_Chapter4-SimpleSoccer")
