@@ -13,7 +13,7 @@
 //  Author: Mat Buckland 2003 (fup@ai-junkie.com)
 //
 //------------------------------------------------------------------------
-#include <windows.h>
+//#include <windows.h> //WINDOWS
 #include <vector>
 #include <cassert>
 

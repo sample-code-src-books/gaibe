@@ -303,10 +303,10 @@ int WINAPI WinMain (HINSTANCE hInstance,
 
   //handle to our window
   HWND						hWnd;
-    
+  
   //our window class structure
   WNDCLASSEX     winclass;
-		 
+  
   // first fill in the window class stucture
   winclass.cbSize        = sizeof(WNDCLASSEX);
   winclass.style         = CS_HREDRAW | CS_VREDRAW;
@@ -320,16 +320,16 @@ int WINAPI WinMain (HINSTANCE hInstance,
   winclass.lpszMenuName  = MAKEINTRESOURCE(IDR_MENU1);
   winclass.lpszClassName = g_szWindowClassName;
   winclass.hIconSm       = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_ICON1));
-
+  
   //register the window class
   if (!RegisterClassEx(&winclass))
   {
     MessageBox(NULL, "Registration Failed!", "Error", 0);
-
+    
     //exit the application
     return 0;
   }
-
+  
   //create the window and assign its ID to hwnd    
   hWnd = CreateWindowEx (NULL,                 // extended style
                          g_szWindowClassName,  // window class name
@@ -343,7 +343,7 @@ int WINAPI WinMain (HINSTANCE hInstance,
                          NULL,                 // window menu handle
                          hInstance,            // program instance handle
                          NULL);                // creation parameters
-
+  
   //make sure the window creation has gone OK
   if(!hWnd)
   {
@@ -352,30 +352,30 @@ int WINAPI WinMain (HINSTANCE hInstance,
   
   //start the timer
   timer.Start();
-
+  
   MSG msg;
-
+  
   //enter the message loop
   bool bDone = false;
-
+  
   while(!bDone)
   {
-					
+    
     while( PeekMessage( &msg, NULL, 0, 0, PM_REMOVE ) ) 
     {
       if( msg.message == WM_QUIT ) 
       {
         // Stop loop if it's a quit message
-	      bDone = true;
+        bDone = true;
       } 
-
+      
       else 
       {
         TranslateMessage( &msg );
         DispatchMessage( &msg );
       }
     }
-
+    
     if (timer.ReadyForNextFrame() && msg.message != WM_QUIT)
     {
       //update game states

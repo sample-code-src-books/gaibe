@@ -1,0 +1,6 @@
+-dot draws graphs in four main phases
+  -
+-the dot language describes three kinds main kinds of objects
+  -graphs
+  -nodes
+  -edges

@@ -1,0 +1,7 @@
+dgraph G
+{
+Thread -> OSXThread;
+Thread -> WINThread;
+
+
+}

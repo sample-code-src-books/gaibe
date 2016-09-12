@@ -1,0 +1,17 @@
+digraph G
+{
+    Interface -> "Platform Specific Code";
+
+    node [shape=box];
+    Thread -> OSXThread;
+    Thread -> WINThread;
+
+    Clock -> OSXClock;
+    Clock -> WINClock;
+
+    Screen -> OSXScreen;
+    Screen -> WINScreen;
+
+    Atomics -> OSXAtomics;
+    Atomics -> WINAtomics;
+}

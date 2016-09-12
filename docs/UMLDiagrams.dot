@@ -1,0 +1,27 @@
+digraph G{
+  //fontname = "Inconsolata";
+  //fontsize = 11;
+
+  //node[
+   // shape=record;
+   // fontname = "Inconsolata";
+   // fontsize = 11;
+  //]
+  Blah [
+    shape=record;
+    label="{Class Name | Attributes | Operations}";
+  ];
+
+  ClassTemplate [
+    shape=none;
+    margin=0;
+    label=< <B>bold text</B> regular text >
+      /*
+      <<TABLE>
+        <TR>ClassName</TR>
+        <TR><Attributes</TR>
+        <TR>Operations</TR>
+      </TABLE>>
+      */
+  ];
+}

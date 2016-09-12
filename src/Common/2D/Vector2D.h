@@ -10,7 +10,7 @@
 //
 //------------------------------------------------------------------------
 #include <math.h>
-#include <windows.h>
+//#include <windows.h>//WINDOWS
 #include <iosfwd>
 #include <limits>
 #include "misc/utils.h"
