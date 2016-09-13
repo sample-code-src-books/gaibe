@@ -1,0 +1,165 @@
+digraph G{
+  Blah [
+    shape=record;
+    label="{Class Name | Attributes | Operations}";
+  ];
+
+
+  htmlTestTemplate [
+    shape=none;
+    margin=0;
+    label=
+    <<table border="2" cellborder="1" cellspacing="0" cellpadding="0">
+      <tr attribute="class name">
+        <td align="center"><b>HTMLTestTemplate</b></td>
+      </tr>
+      <tr attribute="class data">
+        <td align="center">
+          <br/><b>+</b> PublicData : TYPE
+          <br/><b>-</b> PrivateData : TYPE
+          <br/><b>#</b> ProtectedData : TYPE
+        </td>
+      </tr>
+      <tr attribute="class operations">
+          <td align="left">
+            <br/><b>+</b> PublicFunc() : TYPE
+            <br/><b>-</b> PrivateFunc() : TYPE
+            <br/><b>#</b> ProtectedFunc() : TYPE
+          </td>
+      </tr>
+    </table>>;
+  ];
+  htmlTemplate [
+    shape=none;
+    margin=0;
+    label=
+    <<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+      <tr attribute="class name">
+        <td align="center"><b>HTMLTemplate</b></td>
+      </tr>
+      <tr attribute="class data">
+        <td align="center">
+          <br/><b>+</b> PublicData : TYPE
+          <br/><b>-</b> PrivateData : TYPE
+          <br/><b>#</b> ProtectedData : TYPE
+        </td>
+      </tr>
+      <tr attribute="class operations">
+          <td align="left">
+            <br/><b>+</b> PublicFunc() : TYPE
+            <br/><b>-</b> PrivateFunc() : TYPE
+            <br/><b>#</b> ProtectedFunc() : TYPE
+          </td>
+      </tr>
+    </table>>;
+  ];
+
+  htmlTemplate [
+    shape=none;
+    margin=0;
+    label=
+    <<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+      <tr attribute="class name">
+        <td align="center"><b>Name</b></td>
+      </tr>
+      <tr attribute="class data">
+        <td align="center">
+          <br/><b>+</b> PublicData : TYPE
+          <br/><b>-</b> PrivateData : TYPE
+          <br/><b>#</b> ProtectedData : TYPE
+        </td>
+      </tr>
+      <tr attribute="class operations">
+          <td align="left">
+            <br/><b>+</b> PublicFunc() : TYPE
+            <br/><b>-</b> PrivateFunc() : TYPE
+            <br/><b>#</b> ProtectedFunc() : TYPE
+          </td>
+      </tr>
+    </table>>;
+  ];
+  htmlTemplate [
+    shape=none;
+    margin=0;
+    label=
+    <<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+      <tr attribute="class name">
+        <td align="center"><b>Name</b></td>
+      </tr>
+      <tr attribute="class data">
+        <td align="center">
+          <br/><b>+</b> PublicData : TYPE
+          <br/><b>-</b> PrivateData : TYPE
+          <br/><b>#</b> ProtectedData : TYPE
+        </td>
+      </tr>
+      <tr attribute="class operations">
+          <td align="left">
+            <br/><b>+</b> PublicFunc() : TYPE
+            <br/><b>-</b> PrivateFunc() : TYPE
+            <br/><b>#</b> ProtectedFunc() : TYPE
+          </td>
+      </tr>
+    </table>>;
+  ];
+  htmlTemplate [
+    shape=none;
+    margin=0;
+    label=
+    <<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+      <tr attribute="class name">
+        <td align="center"><b>Name</b></td>
+      </tr>
+      <tr attribute="class data">
+        <td align="center">
+          <br/><b>+</b> PublicData : TYPE
+          <br/><b>-</b> PrivateData : TYPE
+          <br/><b>#</b> ProtectedData : TYPE
+        </td>
+      </tr>
+      <tr attribute="class operations">
+          <td align="left">
+            <br/><b>+</b> PublicFunc() : TYPE
+            <br/><b>-</b> PrivateFunc() : TYPE
+            <br/><b>#</b> ProtectedFunc() : TYPE
+          </td>
+      </tr>
+    </table>>;
+  ];
+          //<td>+ PublicFunc() : TYPE<br/>- PrivateFunc() : TYPE<br/># ProtectedFunc() : TYPE
+  RacingCar [
+    shape=none;
+    margin=0;
+    label=
+    <<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+      <tr attribute="class name">
+        <td><b>Racing Car</b></td>
+      </tr>
+      <tr attribute="class data">
+        <td>Velocity:Vector<br/>Position:Vector</td>
+      </tr>
+      <tr attribute="class operations">
+          <td>Steer()<br/>Accelerate()<br/>GetPosition()</td>
+      </tr>
+    </table>>;
+  ];
+  node [
+    fontname="Inconsolata"
+    fontsize=11
+    shape="record"
+  ];
+  SimplTemplate [
+    label = 
+    "{
+       Class name
+       | 
+          + publicData : type
+       \l - privateData: type
+       \l # protectedData: type
+       | +publicFunction : ret_type
+       \l -privateFunction : ret_type
+       \l #protectedFunction : ret_type
+     }"
+
+  ];
+}
