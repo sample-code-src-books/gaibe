@@ -2,11 +2,9 @@
 Mat Buckland's "Programming Game AI by Example" is a great resource. Time to make it cross platform.
 
 ## Goal ##
----
 The goal is to add a Platform Interface to the code in the Common section of Game AI by Example.
 
 ## UML diagrams ##
----
 **work in progress**
 UML were created using graphviz's Dot language.
 
@@ -20,8 +18,7 @@ Thread UML
 ![alt text][Threads]
 [Threads]: https://github.com/Plotnus/gaibe/blob/master/docs/Threads.png "Threads"
 
-## Guiding Links ##
----
+## Useful Links ##
 Some links that have helped guide this endeavor
 
 [Conventions and patterns for multi-platform development] (https://www.chromium.org/developers/design-documents/conventions-and-patterns-for-multi-platform-development)
