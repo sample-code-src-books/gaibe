@@ -94,7 +94,7 @@ set(COMMON_FILES ${COMMON_FILES}
   ../Common/misc/Cgdi.cpp
   ../Common/misc/FrameCounter.cpp
   ../Common/misc/iniFileLoaderBase.cpp
-  ../Common/misc/WindowUtils.cpp
+  #../Common/misc/WindowUtils.cpp ## Windows Platform specific. Moved.
   ../Common/Time/PrecisionTimer.cpp
 
   ../Common/2D/C2DMatrix.h
@@ -109,7 +109,7 @@ set(COMMON_FILES ${COMMON_FILES}
   ../Common/misc/FrameCounter.h
   ../Common/misc/iniFileLoaderBase.h
   ../Common/misc/utils.h
-  ../Common/misc/WindowUtils.h
+  #../Common/misc/WindowUtils.h ## Windows Platform Specific code. Moved.
   ../Common/Time/PrecisionTimer.h
   ../Common/Time/Regulator.h
 )

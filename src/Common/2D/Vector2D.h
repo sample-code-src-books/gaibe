@@ -298,7 +298,7 @@ inline double Vec2DLengthSq(const Vector2D& v)
   return (v.x*v.x + v.y*v.y);
 }
 
-
+/* WINDOWS: These are likely for converting the Engine's Vector2D to appropriate WinAPI values
 inline Vector2D POINTStoVector(const POINTS& p)
 {
   return Vector2D(p.x, p.y);
@@ -326,7 +326,7 @@ inline POINT VectorToPOINT(const Vector2D& v)
 
   return p;
 }
-
+*/
 
 
 //------------------------------------------------------------------------operator overloads

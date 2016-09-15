@@ -31,11 +31,12 @@ typedef int BOOL;
 
 
 // defining windows API fon non windows machines
-
+/*
 inline VOID WINAPI Sleep(_In_ DWORD dwMilliseconds)
 {
   return;
 }
+ */
 
 inline BOOL WINAPI SetConsoleTextAttribute(HANDLE handle, WORD wAttributes)
 {

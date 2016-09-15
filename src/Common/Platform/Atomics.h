@@ -12,6 +12,7 @@ using pS32 = S32*;
 using F32 = float;
 using F64 = double;
 
+using U16 = uint16_t;
 using U32 = uint32_t;
 using U64 = uint64_t;
 

@@ -44,12 +44,25 @@ set( HEADER_FILES ${HEADER_FILES}
 )
 source_group("Header Files" FILES ${HEADER_FIlES})
 
+set( PLATFORM ${PLATFORM}
+  ../../Common/Platform/Atomics.h
+  ../../Common/Platform/Platform.h
+  ../../Common/Platform/OSX.h
+  ../../Common/Platform/Windows.h
+
+  ../../Common/Platform/Platform.cpp
+  ../../Common/Platform/OSX.cpp
+  ../../Common/Platform/Windows.cpp
+
+)
+source_group("Platform" FILES ${Platform})
 #################
 ## Executables ##
 #################
 add_executable(WestWorld1
   ${SRC_FILES}
   ${HEADER_FILES}
+  ${PLATFORM}
 )
 
 

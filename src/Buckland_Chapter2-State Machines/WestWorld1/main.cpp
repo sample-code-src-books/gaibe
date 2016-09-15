@@ -3,6 +3,8 @@
 #include "misc/ConsoleUtils.h"
 #include "EntityNames.h"
 
+#include "Platform/Platform.h"
+
 
 int main()
 {

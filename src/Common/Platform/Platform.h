@@ -1,10 +1,41 @@
 #pragma once
 #include "Atomics.h"
 
+
+#ifdef __APPLE__
+  #include "OSX.h"
+#elif _WIN32
+  #include "Windows.h"
+#else
+  //platform not supported
+
+#endif
+
+
+
+/////////////////////
+// MISC -- TO-SORT //
+/////////////////////
+
+  // milliseconds: the time interval for which execution is to be suspended
+  //void Sleep(U64 milliseconds) = 0;
+
+  // handle: a handle to the output buffer. It should be to a console
+  // characterAttributes: the character attributes
+  //S32 SetConsoleTextAttribute(void* handle, U16 characterAttributes){ return 0; }
+
+  // retrieves a handle to the specified standard device
+  void* GetStdHandle(U64 stdHandle);
+
+// Input Output
+  void WaitForKeyboardInput(void);
+  S32 _kbhit( void );
+
+
+/*
+
 using TIME = U64;
 
-class Platform
-{
 /////////////////
 // CLOCK/TIMER //
 /////////////////
@@ -41,19 +72,12 @@ class Platform
     ~Clock(){}
   }
 
-  // milliseconds: the time interval for which execution is to be suspended
-  virtual void Sleep(U64 milliseconds) = 0;
+*/
 
-  // handle: a handle to the output buffer. It should be to a console
-  // characterAttributes: the character attributes
-  S32 SetConsoleTextAttribute(void* handle, U16 characterAttributes) = 0;
 
-  // retrieves a handle to the specified standard device
-  void* GetStdHandle(U64 stdHandle);
 
-// Input Output
-  void WaitForKeyboardInput(void);
-  S32 _kbhit( void )
+/*
+
 /////////////////////
 // WINDOW / SCREEN //
 ////////////////////
@@ -202,3 +226,5 @@ class Command
 
   }
 // rejection pile
+
+*/

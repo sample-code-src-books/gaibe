@@ -1,9 +1,10 @@
 #pragma once
-#include "Platform.h"
+#include "Atomics.h"
+// Includes for Sleep()
+#include <thread>
+#include <chrono>
 
-class OSX : public Platform
-{
+void Sleep(U64 ms);
 
-}
 
 
