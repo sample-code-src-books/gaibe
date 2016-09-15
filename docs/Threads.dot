@@ -1,7 +1,115 @@
-dgraph G
-{
-Thread -> OSXThread;
-Thread -> WINThread;
+digraph G{
+  graph [ splines="ortho"]
 
+  IThread [
+    shape=none;
+    margin=0;
+    label=
+    <<table border="2" cellborder="1" cellspacing="0" cellpadding="0">
+      <tr attribute="class name">
+        <td align="center"><b><i>Thread</i></b></td>
+      </tr>
+      <tr attribute="class data">
+        <td align="center">
+          <br/><i> <b> [empty] </b> </i> 
+        </td>
+      </tr>
+      <tr attribute="class operations">
+          <td align="left">
+            <br/><i> <b>+</b> Create() : void  </i>
+            <br/><i> <b>+</b> Destroy() : void </i>
+            <br/><i> <b>+</b> Start() : void   </i>
+            <br/><i> <b>+</b> Stop() : void    </i>
+            <br/><i> <b>+</b> Suspend() : void </i>
+            <br/><i> <b>+</b> Resume() : void  </i>
+          </td>
+      </tr>
+    </table>>;
+  ];
+  OSXThread [
+    shape=none;
+    margin=0;
+    label=
+    <<table border="2" cellborder="1" cellspacing="0" cellpadding="0">
+      <tr attribute="class name">
+        <td align="center"><b>OSXThread</b></td>
+      </tr>
+      <tr attribute="class data">
+        <td align="center">
+          <br/><b> [empty] </b>
+        </td>
+      </tr>
+      <tr attribute="class operations">
+          <td align="left">
+            <br/><b>+</b> Create() : void
+            <br/><b>+</b> Destroy() : void
+            <br/><b>+</b> Start() : void
+            <br/><b>+</b> Stop() : void
+            <br/><b>+</b> Suspend() : void
+            <br/><b>+</b> Resume() : void
+          </td>
+      </tr>
+    </table>>;
+  ];
+  WINThread [
+    shape=none;
+    margin=0;
+    label=
+    <<table border="2" cellborder="1" cellspacing="0" cellpadding="0">
+      <tr attribute="class name">
+        <td align="center"><b>WINThread</b></td>
+      </tr>
+      <tr attribute="class data">
+        <td align="center">
+          <br/><b> [empty] </b>
+        </td>
+      </tr>
+      <tr attribute="class operations">
+          <td align="left">
+            <br/><b>+</b> Create() : void
+            <br/><b>+</b> Destroy() : void
+            <br/><b>+</b> Start() : void
+            <br/><b>+</b> Stop() : void
+            <br/><b>+</b> Suspend() : void
+            <br/><b>+</b> Resume() : void
+          </td>
+      </tr>
+    </table>>;
+  ];
 
+  NIXThread [
+    shape=none;
+    margin=0;
+    label=
+    <<table border="2" cellborder="1" cellspacing="0" cellpadding="0">
+      <tr attribute="class name">
+        <td align="center"><b>NIXThread</b></td>
+      </tr>
+      <tr attribute="class data">
+        <td align="center">
+          <br/><b> [empty] </b>
+        </td>
+      </tr>
+      <tr attribute="class operations">
+          <td align="left">
+            <br/><b>+</b> Create() : void
+            <br/><b>+</b> Destroy() : void
+            <br/><b>+</b> Start() : void
+            <br/><b>+</b> Stop() : void
+            <br/><b>+</b> Suspend() : void
+            <br/><b>+</b> Resume() : void
+          </td>
+      </tr>
+    </table>>;
+  ];
+  edge [
+    arrowhead="empty"
+  ]
+
+  {rank=same node[shape=point width=0.005] x->y->z [dir=none]}
+
+  IThread->y[dir=back arrowtail=onormal arrowsize=3] 
+  x -> OSXThread[dir=none]
+  y -> WINThread[dir=none]
+  z -> NIXThread[dir=none]
 }

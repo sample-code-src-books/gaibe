@@ -96,6 +96,11 @@ using TIME = U64;
 ///////////////
   class Thread
   {
+    // must return a status flag
+    void Create()=0;
+    // must return a status flag
+    void Destroy()=0;
+
     void Start()=0;
     void Stop()=0;
 
